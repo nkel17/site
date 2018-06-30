@@ -71,12 +71,6 @@ img.aligncenter {
 body {
   background-color: #FFFFFF;
   border-style: none; }
-
-body,
-a,
-a:hover {
-  color: #000000; }
-
 a,
 a:hover {
   text-decoration: none;
@@ -111,11 +105,11 @@ body.page-template{
   background-image: url("../img/sitebackground.jpg");
   background-position: center center;
   background-size: cover; }
-  body.page-template p {
+  body.page-template p,a {
     margin-bottom: 28px;
     color: #999999; }
     @media (max-width: 800px) {
-      body.page-template p {
+      body.page-template p, a{
         font-size: 32px;
         line-height: 40px; } }
 
@@ -148,6 +142,7 @@ body.page-template{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
