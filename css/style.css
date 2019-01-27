@@ -5,6 +5,7 @@ Version: 1.0
 
 /*** GENERAL ***/
 * { margin: 0; overflow: hidden; }
+a {color:#ffffff; text-decoration:none;}
 
 /*** NAVIGATION ***/
 
@@ -12,3 +13,5 @@ Version: 1.0
 #web-nav #menu {margin-top: 50px; color:#ffffff; text-align:right; list-style-type:none; margin-right:32px; float:right; font-size: 32px; font-family:Impact, Charcoal, sans-serif;}
 
 .content {width:35%; height: 100%; overflow:auto; float:left; position:fixed; left: 25%; color:#000000; text-align:left;}
+
+#rightsidebar {width:10%; height:100%; overflow:auto; position:fixed; left: 90%; background-color: #000000; background-repeat: repeat;}
