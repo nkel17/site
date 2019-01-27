@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<head>
-	<title>Neha Kelkar</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="css/style.css" rel="stylesheet" media="screen" />
-</head>
+<html lang="en">
+	<head>
+		<title>three.js webgl - map controls</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				color: #000;
+				font-family:Monospace;
+				font-size:13px;
+				text-align:center;
+				font-weight: bold;
 
-<body>
-	<nav id="web-nav">
-		<ul id="menu">
-			<li>
-				<a href="posts.html">Posts</a>
-			</li>
-	        <li>
-				<a href="resume.html">Resume</a>
-			</li>
-		</ul>
-	</nav>
+				background-color: #fff;
+				margin: 0px;
+				overflow: hidden;
+			}
+
+			#info {
+				color:#000;
+				position: absolute;
+				top: 0px; width: 100%;
+				padding: 5px;
+				box-sizing: border-box;
+			}
+
+			a {
+				color: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="info">
+			<a href="http://threejs.org" target="_blank" rel="noopener">three.js</a> - map controls example
+		</div>
 
 		<script src="js/three.min.js"></script>
 		<script src="js/MapControls.js"></script>
@@ -40,8 +59,8 @@
 			function init() {
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0x000000 );
-				scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
+				scene.background = new THREE.Color( 0xcccccc );
+				scene.fog = new THREE.FogExp2( 0xcccccc, 0.002 );
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -73,12 +92,12 @@
 				geometry.translate( 0, 0.5, 0 );
 				var material = new THREE.MeshPhongMaterial( { color: 0xffffff, flatShading: true } );
 
-				for ( var i = 0; i < 25; i ++ ) {
+				for ( var i = 0; i < 500; i ++ ) {
 
 					var mesh = new THREE.Mesh( geometry, material );
-					mesh.position.x = Math.random() * 600 - 300;
+					mesh.position.x = Math.random() * 1600 - 800;
 					mesh.position.y = 0;
-					mesh.position.z = Math.random() * 600 - 300;
+					mesh.position.z = Math.random() * 1600 - 800;
 					mesh.scale.x = 20;
 					mesh.scale.y = Math.random() * 80 + 10;
 					mesh.scale.z = 20;
@@ -106,9 +125,9 @@
 				window.addEventListener( 'resize', onWindowResize, false );
 
 
-				// var gui = new dat.GUI();
+				var gui = new dat.GUI();
 
-				// gui.add( controls, 'screenSpacePanning' );
+				gui.add( controls, 'screenSpacePanning' );
 
 			}
 
@@ -138,6 +157,6 @@
 			}
 
 		</script>
-	</div>
 
-</body>
+	</body>
+</html>
