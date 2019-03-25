@@ -47,7 +47,7 @@
 
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0xf9f5ed );
-				scene.fog = new THREE.FogExp2( 0x000000, 0.001 );
+				//scene.fog = new THREE.FogExp2( 0x000000, 0.1 );
 
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
@@ -77,7 +77,9 @@
 
 				var geometry = new THREE.BoxBufferGeometry( 1, 1, 1 );
 				geometry.translate( 0, 0.5, 0 );
-				var material = new THREE.MeshPhongMaterial( { color: 0x4548e8, flatShading: true } );
+
+				// 0x4548e8
+				var material = new THREE.MeshPhongMaterial( { color: 0x0003c9 , flatShading: true } );
 
 				for ( var i = 0; i < 25; i ++ ) {
 
@@ -96,15 +98,15 @@
 
 				// lights
 
-				var light = new THREE.DirectionalLight( 0xffffff );
-				light.position.set( 1, 1, 1 );
-				scene.add( light );
+				//var light = new THREE.DirectionalLight( 0xffffff );
+				//light.position.set( 1, 1, 1 );
+				//scene.add( light );
 
-				var light = new THREE.DirectionalLight( 0x002288 );
-				light.position.set( - 1, - 1, - 1 );
-				scene.add( light );
+				//var light = new THREE.DirectionalLight( 0xffffff );
+				//light.position.set( - 1, - 1, - 1 );
+				//scene.add( light );
 
-				var light = new THREE.AmbientLight( 0x222222 );
+				var light = new THREE.AmbientLight( 0xffffff );
 				scene.add( light );
 
 				//
