@@ -5,7 +5,7 @@ Version: 1.0
 
 /*** GENERAL ***/
 * { margin: 0; overflow: hidden; }
-a {color: #f9f5ed; text-decoration:none; -webkit-text-stroke-width: 3px; -webkit-text-stroke-color: black;}
+a {color: #f9f5ed; text-decoration:none;}
 
 /*** NAVIGATION ***/
 
